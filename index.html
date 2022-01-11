@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="jquery-ui.min.css.css">
+    <title>Datepicker</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th, td {
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body id="body">
+<div class="container">
+    <h1>Tracker</h1>
+    <div class="row">
+        <h2 class="col">Time Tracker</h2>
+        <button class="col" id="log">Add Time Log</button>
+        <button class="col" id="reset">Reset</button>
+    </div>
+    <div class="row">
+        <input type="text" id="datepicker" class="col" placeholder="start time"/>
+        <input type="text" id="name" class="col" placeholder="item name"/>
+        <h2 id="watch" class="col">00:00:00</h2>
+        <input class="col" onclick="callme(this);" type="button" value="Start"/>
+
+        <input type="text" id="description"  class="col" placeholder="description"/>
+
+
+    </div>
+    <table  id="example" class="table table-striped" style="width:100%" >
+        <thead>
+        <tr>
+            <th scope="col" class="sort" data-sort="id">#</th>
+            <th scope="col" class="sort" data-sort="start_t">Start Time</th>
+            <th scope="col" class="sort" data-sort="name_w">Name</th>
+            <th scope="col" class="sort" data-sort="timespent">Time Spend</th>
+            <th scope="col" class="sort" data-sort="des">Description</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+<script>$(document).ready(function() {
+    $('#example').DataTable();
+} );</script>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-ui.min.js.js"></script>
+<script src=main.js></script>
+<script src=style.css></script>
+
+<script !src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script !src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script !src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $("#datepicker").datepicker();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
